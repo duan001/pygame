@@ -296,6 +296,16 @@ class Game:
             if self.message_timer == 0:
                 self.message = ''
                 if self.game_over:
+                    # Wait for any key press to continue
+                    waiting = True
+                    while waiting:
+                        for event in pygame.event.get():
+                            if event.type == pygame.KEYDOWN:
+                                waiting = False
+                                break
+                            if event.type == pygame.QUIT:
+                                pygame.quit()
+                                sys.exit()
                     self.reset_game()
                     self.target_word = self.get_random_word(self.word_list)
 

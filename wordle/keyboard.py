@@ -7,7 +7,7 @@ class Keyboard:
         self.key_layout = [
             ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
             ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-            ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'BACK']
+            ['^E', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '^B']
         ]
         self.key_states = {}
         self._create_keys()
